@@ -132,8 +132,7 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         #########################################################################################
-        cd /opt/rt-n56u/trunk
-        make libs/libpcre_only
+        cd /opt/rt-n56u/
         sudo make $TNAME 0
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
