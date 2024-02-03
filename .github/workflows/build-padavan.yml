@@ -134,6 +134,7 @@ jobs:
         #########################################################################################
         cd /opt/rt-n56u/
         sudo make $TNAME 0
+        sudo make clean
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
