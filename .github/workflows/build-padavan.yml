@@ -133,7 +133,7 @@ jobs:
         #echo "自定义项=y" >> .config
         #########################################################################################
         sudo make clean
-        sudo make $TNAME 0
+        sudo make K2P
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
