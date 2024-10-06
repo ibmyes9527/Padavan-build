@@ -37,7 +37,7 @@ on:
         - Xiaoyu_C3
         - Xiaoyu_C5
         - ZTE_E8820S
-        default: Xiaoyu_C1
+        default: Xiaomi_CR6606
       plugins:
         description: 'json format string of include configs'
         required: true
@@ -45,7 +45,7 @@ on:
       firmwarever:
         description: 'firmware''s version'
         required: true
-        default: '20240209'
+        default: '20241006'
 env:
   REPOSITORY_URL: https://github.com/tsl0922/padavan.git
   WORK_PATH: /opt/padavan-4.4
@@ -273,10 +273,10 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SINGBOX=${{env.singbox}}" >> .config #集成Singbox执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_NAIVEPROXY=${{env.naiveproxy}}" >> .config #集成Naiveproxy执行文件
         echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=${{env.ssobfs}}" >> .config # simple-obfs混淆插件
-        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config #SS server
+        echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >> .config #SS server
         #
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #可以不集成
-        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #tunsafe
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config #可以不集成
+        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> .config #tunsafe
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=${{env.dnsforwarder}}" >> .config #dnsforwarder
         #
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=${{env.adbyby}}" >> .config #adbyby plus+
@@ -288,7 +288,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=${{env.zerotier}}" >> .config #zerotier ~1.3M
         echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=${{env.ddnsto}}" >> .config #ddnsto
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=${{env.wireguard}}" >> .config #wireguard
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #frp server
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> .config #frp server
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=${{env.frpc}}" >> .config #frp client
         #
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=${{env.aldrive}}" >> .config #阿里云盘
