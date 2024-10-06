@@ -276,7 +276,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config #SS server
         #
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >> .config #可以不集成
-        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> .config #tunsafe
+        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #tunsafe
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=${{env.dnsforwarder}}" >> .config #dnsforwarder
         #
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=${{env.adbyby}}" >> .config #adbyby plus+
